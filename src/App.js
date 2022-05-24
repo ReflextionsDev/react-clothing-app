@@ -154,6 +154,9 @@ function getOutfit(type) {
   return outfit
 }
 
+// Needs a regenerate function
+// Need an outfit function
+
 function App() {
 
   const [outfit, setOutfit] = useState(getOutfit(getClothingType()))
@@ -163,6 +166,7 @@ function App() {
   return (
     <div className="App">
       <h1>React Clothing App</h1>
+      <h2>{dateString}</h2>
       <div id='clothes'>
         {Object.keys(outfit).map(key => {
           return <Item
@@ -171,6 +175,13 @@ function App() {
             image={outfit[key].imageUrl}
           />
         })}
+      </div>
+      <br />
+      <div id='buttons'>
+        <button onClick={e => setOutfit(getOutfit(getClothingType()))}>New Outfit</button>
+        <button onClick={e => setOutfit(getOutfit('formal'))}>Formal Outfit</button>
+        <button onClick={e => setOutfit(getOutfit('casual'))}>Casual Outfit</button>
+        <button onClick={e => setOutfit(getOutfit('sport'))}>Sport Outfit</button>
       </div>
     </div>
   );

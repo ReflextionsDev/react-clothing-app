@@ -26,3 +26,15 @@ h1 {
   max-width: 200px;
   height: auto;
 }
+
+#buttons {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#buttons button {
+  width: 15%;
+  font-size: 1em;
+}
