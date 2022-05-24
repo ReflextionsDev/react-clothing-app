@@ -154,9 +154,7 @@ function getOutfit(type) {
   return outfit
 }
 
-// Needs a regenerate function
-// Need an outfit function
-
+// App
 function App() {
 
   const [outfit, setOutfit] = useState(getOutfit(getClothingType()))
